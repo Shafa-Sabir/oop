@@ -7,29 +7,38 @@ class Student{
     string name;
     string Dep;
     public:
-    Student(int roll_no, string name,string Dep){
-        this->roll_no=roll_no;
+    Student getname(string name){
         this->name=name;
+        return *this;
+       
+
+    }
+    Student getrollno(int roll_no){
+        this->roll_no=roll_no;
+        return *this;
+    }
+    Student setDep(string Dep){
         this->Dep=Dep;
-
-
+        return *this;
     }
-    Student(Student &s3){
-        this->roll_no=s3.roll_no;
-        this->name=s3.name;
-        this->Dep=s3.Dep;
 
-    }
+   
+    
    void display_information(){
     cout<<roll_no<<name<<Dep<<endl;
    }
 
 };
 int main (){
-    Student s1(13,"shafa","computer science");
-    Student s2(s1);
-    s1.display_information();
-    s2.display_information();
+    Student S1;
+    S1.getname("shafa").getrollno(34).setDep("computer science").display_information();
+
+    
+      
+
+    
+
+    
 
 
 
