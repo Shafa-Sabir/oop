@@ -1,16 +1,28 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int array[8]={1,3,5,6,7,9,2,4};
-
-    int *ptr = (int*)array;
-    cout<<ptr<<endl;
-    cout<<array<<endl;
-    for(int i =1;i<8;i++){
-          cout<< ptr+i<<endl;
-          cout<<*(ptr+i)<<endl;
-    }
+class Student {
+    public:
+    int rollno;
+    string name;
+    string department;
     
-    return 0;
 
+};
+
+int main(){
+    Student* s1= new Student();
+     s1->rollno=34;
+    s1->name="Mubashir";
+    s1->department="computer science";
+cout<<s1->rollno<<s1->name<<s1->department<<endl;
+delete (s1);
+return 0;
+
+
+
+
+
+
+    
+    
 }
