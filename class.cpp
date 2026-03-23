@@ -1,38 +1,98 @@
 #include<iostream>
 using namespace std;
 
-class Student{
+class Account{
     private:
-    int roll_no;
-    string name;
-    string Dep;
+
+    int Account_no;
     public:
-    Student getname(string name){
-        this->name=name;
-        return *this;
-       
+    string user_name;
+    string Account_type;
+
+    public:
+    Account (){
+        
+    }
+    Account(string user_name,string Account_type){
+        this->user_name=user_name;
+        this->Account_type=Account_type;
 
     }
-    Student getrollno(int roll_no){
-        this->roll_no=roll_no;
-        return *this;
-    }
-    Student setDep(string Dep){
-        this->Dep=Dep;
-        return *this;
-    }
+    void get_Account_no( int Account_no){
+       this-> Account_no=Account_no;
 
-   
+
+    }
+    int set_Account(){
+        return  Account_no;
+
+    }
+    void create_Account(){
+        cout<<"Hello, Account is created."<<endl;
+
+    }
+    void display_information(){
+        cout<<
+
+    }
+    void withdraw(){
     
-   void display_information(){
-    cout<<roll_no<<name<<Dep<<endl;
-   }
+    }
+    void deposit(){
+
+    }
+    ~Account(){
+        cout<<"Account object is destroyed"<<endl;
+    }
+     
 
 };
-int main (){
-    Student S1;
-    S1.getname("shafa").getrollno(34).setDep("computer science").display_information();
 
+
+
+
+int main (){
+    do{
+    cout<<"*********************************"<<endl;
+    cout<<"What function you want to perform"<<endl;
+
+    
+        cout<<"1. Create Account"<<endl;
+        cout<<"2.  Display information"<<endl;
+        cout<<"3.   WithDraw"<<endl;
+        cout<<"4.  Deposit"<<endl;
+        cout<<"5.Exit"<<endl;
+        cout<<"********"<<endl;
+        int a;
+        cout<<"Enter your choice:";
+        cin>>a;
+        switch(a){
+            case1:
+            Account A1;
+            A1.create_Account();
+            break;
+            case2:
+             Account A1("shafa","saving account");
+             break;
+             case3:
+             
+
+
+
+
+
+
+
+
+        }while(a=!5);
+    
+
+     
+
+    }
+
+
+    
     
       
 
